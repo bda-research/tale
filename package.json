@@ -1,0 +1,32 @@
+{
+  "name": "tale",
+  "version": "0.0.1",
+  "description": "An ETL tool.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/test.*.js"
+  },
+  "keywords": [
+    "extract",
+    "transform",
+    "load",
+    "aggregate",
+    "data"
+  ],
+  "author": "Mike Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  },
+  "dependencies": {
+    "csv-parse": "^4.4.1",
+    "fluture": "^11.0.1",
+    "ramda": "^0.26.1",
+    "sanctuary": "^2.0.0"
+  }
+}
