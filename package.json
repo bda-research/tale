@@ -26,8 +26,10 @@
   "dependencies": {
     "commander": "^2.20.0",
     "csv-parse": "^4.4.1",
+    "electron": "^5.0.6",
     "fluture": "^11.0.1",
     "ramda": "^0.26.1",
+    "rimraf": "^2.6.3",
     "sanctuary": "^2.0.0"
   }
 }

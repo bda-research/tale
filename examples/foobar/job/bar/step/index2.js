@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = [
-	{id: '0', title: 'input', func: 'abc'},
+	{id: '0', title: 'input', func: 'csv'},
 	{id: '1', title: 'keepFromLastYear', func: 'filter'},
 	{id: '2', title: 'addFields', func: 'addFields'},
 	{id: '3', title: 'partition', func: 'partition'},
