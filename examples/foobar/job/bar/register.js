@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = [
-	{source: 'input', target: 'keepFromLastYearYes', func: 'csv'},
+	{source: 'input', target: 'keepFromLastYearYes', func: 'function'},
 	{source: 'keepFromLastYearYes', target: 'addFields', func: 'csv'},
 	{source: 'addFields', target: 'partition', func: 'csv'},
 	{source: 'partition', target: 'mergeOnline', func: 'csv'},
