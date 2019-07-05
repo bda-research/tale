@@ -29,6 +29,8 @@
   "dependencies": {
     "commander": "^2.20.0",
     "fluture": "^11.0.1",
-    "ramda": "^0.26.1"
+    "ramda": "^0.26.1",
+    "electron": "^5.0.6",
+    "rimraf": "^2.6.3"
   }
 }

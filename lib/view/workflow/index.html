@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="graph-creator.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- fixed button on the top right -->
+    <div class="graph-format">
+        <button id="graphFormat" class="format-btn" value="formatGrpah">Format Graph</button>
+        <div class="info-display-panel" id="infoDisplayPanel">
+        </div>
+    </div>
+    <div class="job-switcher">
+        <div class="jobs-container" id="jobContainer">
+        </div>
+        <div class="job-adder" id="jobAdderContainer">
+            <button id="jobAdder" class="job-btn add-btn" value="addNew">+</button>
+        </div>
+        <div class="job-delete">
+            <button id="jobDelete" class="job-btn add-btn" value="editJob">Edit List</button>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Node Info</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="txt_node_id">Title</label>
+                        <input type="text" name="txt_node_id" class="form-control" id="txt_node_id" placeholder="Title"
+                            autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_func">Function</label>
+                        <!-- <input type="text" name="txt_func" class="form-control" id="txt_func" placeholder="Function"
+                            autofocus> -->
+                        <input type="text" name="txt_func" class="form-control" id="txt_func">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_statu">Description</label>
+                        <input type="text" name="txt_statu" class="form-control" id="txt_statu"
+                            placeholder="Description" autofocus>
+                    </div>
+                    <div id="myModalDynamicArea">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove" aria-hidden="true"></span>close</button>
+                    <button type="button" id="btn_submit" class="btn btn-primary" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edgeModal" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Edge Info</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="txt_func">Function</label>
+                        <input type="text" name="edge_func" class="form-control" id="edge_func" placeholder="Function"
+                            autofocus>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove" aria-hidden="true"></span>close</button>
+                    <button type="button" id="edge_submit" class="btn btn-primary" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dynamicModal" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="dynamicModalHeader"></h4>
+                </div>
+                <div class="modal-body" id="dynamicModalBody">
+                </div>
+                <div class="modal-footer" id="dynamicModalFooter">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-remove" aria-hidden="true"></span>close</button>
+                    <button type="button" id="dynamic_submit" class="btn btn-primary" data-dismiss="modal"><span
+                            class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="graph">
+        <div id="toolbox">
+            <input type="file" id="hidden-file-upload"><input type="image" id="download-input" title="download graph"
+            src="download-icon.png" alt="download graph">
+        </div>
+    </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="http://cdn.jsdelivr.net/filesaver.js/0.1/FileSaver.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="graph-creator.js"></script>
+    <script>if (window.module) module = window.module;</script>
+</body>
+// src="upload-icon.png" alt="upload graph"> <input type="image" id="download-input" title="download graph"
+// src="trash-icon.png" alt="delete graph
+</html>

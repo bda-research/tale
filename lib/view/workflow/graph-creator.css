@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+p{ 
+     text-align: center; 
+     overflow: overlay;
+     position: relative;
+}
+
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(248, 248, 248)
+}
+
+#toolbox{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    z-index: 5;
+}
+
+#toolbox input{
+    width: 30px;
+    opacity: 0.4;
+}
+#toolbox input:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#hidden-file-upload{
+    display: none;
+}
+
+#download-input{
+    margin: 0 0.5em;
+}
+
+.conceptG text{
+    pointer-events: none;
+}
+
+marker{
+    fill: #333;
+}
+
+g.conceptG circle{
+    fill: #F6FBFF;
+    stroke: #333;
+    stroke-width: 2px;
+}
+
+g.conceptG:hover circle{
+    fill: rgb(200, 238, 241);
+}
+
+g.selected circle{
+    fill: rgb(229, 172, 247);;
+}
+g.selected:hover circle{
+    fill: rgb(200, 238, 241);
+}
+
+path.link {
+    fill: none;
+    stroke: #333;
+    stroke-width: 6px;
+    cursor: default;
+}
+
+path.link:hover{
+    stroke: rgb(94, 196, 204);
+}
+
+g.connect-node circle{
+    fill: #BEFFFF;
+}
+
+path.link.hidden{
+    stroke-width: 0;
+}
+
+path.link.selected {
+    stroke: rgb(229, 172, 247);
+}
+
+.job-switcher {
+    position: fixed;
+    left: 0px; 
+    top: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 100%;
+    min-width: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.job-item {
+    height: 40px;
+    box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.65);
+    transition: transform ease-in .3s;
+}
+.job-btn {
+    padding: 10px;
+    text-align: center;
+    border: none;
+    width: 100%;
+    background: transparent;
+} 
+.job-btn:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+.job-btn:active, :focus {
+    outline: none;
+}
+.job-selected {
+    background: black;
+}
+
+.add-btn {
+    font-size: 1.2em;
+}
+
+.delete-btn {
+    position: absolute;
+    background: #e74c3c;
+    right: -40px;
+    height: 40px;
+    width: 40px;
+    outline:none;
+    border: none;
+    box-shadow: inset 4px 2px 3px 0px rgba(0,0,0,0.65);
+}
+
+
+.delete-btn:active, :focus  {
+    outline: none;
+}
+.delete-btn:hover {
+    background: #ee8377;
+}
+
+.show-delete-function {
+    transform: translateX(-40px);
+}
+
+.graph-format {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.graph-format:hover {
+    
+}
+
+.format-btn {
+    width: 200px;
+    padding: 10px; 
+    background: #0080ff;
+    color: white;
+    border: none;
+}
+.format-btn:hover {
+    background: dodgerblue;
+}
+
+/* style definition for indo display panel  */
+
+.info-display-panel {
+    display: none;
+    background: rgba(100,100,100,0.8);
+    width: 200px;
+    z-index: 99;
+    padding: 10px;
+    color: white;
+}

@@ -1,13 +1,10 @@
-
-'use strict';
+'use strict'
 
 module.exports = [
-	{source: 'input', target: 'keepFromLastYear'},
-	{source: 'keepFromLastYear', target: 'addFields'},
-	{source: 'addFields', target: 'partition'},
-	{source: 'partition', target: 'mergeOnline', op: 'head'},
-	{source: 'partition', target: 'identity', op: 'last'},
-	{source: 'mergeOnline', target: 'concat'},
-	{source: 'identity', target: 'concat'},
-	{source: 'concat', target: 'output'}
+	{source: 'input', target: 'keepFromLastYearYes', func: 'function'},
+	{source: 'keepFromLastYearYes', target: 'addFields', func: 'csv'},
+	{source: 'addFields', target: 'partition', func: 'csv'},
+	{source: 'partition', target: 'mergeOnline', func: 'csv'},
+	{source: 'mergeOnline', target: 'concat', func: 'csv'},
+	{source: 'concat', target: 'output', func: 'csv'},
 ];
