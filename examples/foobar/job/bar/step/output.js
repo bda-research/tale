@@ -1,10 +1,8 @@
 
 'use strict';
 
-const fs = require('fs');
-
-module.exports = identity => items => {
-	// fs.writeFileSync('tmp', items);
-	//console.log(items);
-	return items;
-};
+module.exports = csv => csv({
+	'dir': '/data/xueersi-utils/',
+	'name': 'regularCourse',
+	'fields': ['indicator','dimensionName', 'dimensionValue','dimensionValue2','clsType', 'termYear', 'termSeason', 'value']
+});
